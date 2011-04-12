@@ -23,6 +23,7 @@
     IBOutlet NSButton *SSLField;
     FTPConnectionController * ftpConnect;
     IBOutlet NSTextField *commandField;
+    int tagTesting;
 }
 - (IBAction)connect:(id)sender;
 - (IBAction)sendCommand:(id)sender;

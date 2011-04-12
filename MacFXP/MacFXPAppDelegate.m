@@ -10,7 +10,7 @@
 #import "FTPConnectionController.h"
 
 #define TAG_CONNECTED 1
-#define TAG_DIRLIST 11
+#define TAG_COMMAND 11
 
 
 @implementation MacFXPAppDelegate
@@ -54,12 +54,18 @@
 
 - (void)onSocket:(AsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag
 {
-    NSString * response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    [socketOutput appendString:response];
+    if (tag == TAG_COMMAND) {
+        [socketOutput appendString:[NSString stringWithFormat:@"\n%i: THIS WAS A COMMAND RESPONSE\n", tagTesting++]];
+    } else {
+        NSString * response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        [socketOutput appendString:[NSString stringWithFormat:@"%li : %@", tag, response]];
+        [response release];
+    }
+    
     [logField setString:socketOutput];
+    
     NSRange range = NSMakeRange ([[logField string] length], 0);
     [logField scrollRangeToVisible:range];
-    [response release];
 }
 - (void)onSocketDidSecure:(AsyncSocket *)sock
 {

@@ -21,7 +21,7 @@
 
 #pragma mark Declarations
 
-#define DEFAULT_PREBUFFERING YES        // Whether pre-buffering is enabled by default
+#define DEFAULT_PREBUFFERING NO        // Whether pre-buffering is enabled by default
 
 #define READQUEUE_CAPACITY	5           // Initial capacity
 #define WRITEQUEUE_CAPACITY 5           // Initial capacity
