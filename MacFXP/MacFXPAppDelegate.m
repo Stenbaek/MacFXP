@@ -69,7 +69,7 @@
 }
 - (void)onSocketDidSecure:(AsyncSocket *)sock
 {
-	NSLog(@"onSocketDidSecure:%p", sock);
+	[sock readDataWithTimeout:-1 tag:100];
 }
 
 - (void)onSocket:(AsyncSocket *)sock willDisconnectWithError:(NSError *)err
@@ -80,6 +80,14 @@
 - (void)onSocketDidDisconnect:(AsyncSocket *)sock
 {
 	NSLog(@"onSocketDidDisconnect:%p", sock);
+}
+
+- (void)onSocket:(AsyncSocket *)sock didWriteDataWithTag:(long)tag {
+    // hvad du vil her
+}
+
+- (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port {
+    // hvad du vil her
 }
 
 
