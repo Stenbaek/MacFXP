@@ -28,7 +28,7 @@
         [socket readDataWithTimeout:-1 tag:1];
         
         if (SSL) {
-            [socket writeData:[@"AUTH TLS\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:1];        
+            [socket writeData:[@"AUTH TLS\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:2];        
             [socket readDataWithTimeout:-1 tag:2];
             
             
@@ -37,21 +37,21 @@
             [socket startTLS:tlsSettings];
         }
         
-        [socket writeData:[[NSString stringWithFormat:@"USER %@\n", user] dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:1];
+        [socket writeData:[[NSString stringWithFormat:@"USER %@\n", user] dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:3];
         [socket readDataWithTimeout:-1 tag:3];
         
 
-        [socket writeData:[[NSString stringWithFormat:@"PASS %@\n", pass] dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:1];
+        [socket writeData:[[NSString stringWithFormat:@"PASS %@\n", pass] dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:4];
         [socket readDataWithTimeout:-1 tag:4];
 
 
-        [socket writeData:[@"PBSZ 0\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:1];
+        [socket writeData:[@"PBSZ 0\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:5];
         [socket readDataWithTimeout:-1 tag:5];
-        [socket writeData:[@"SITE XDUPE 3\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:1];
+        [socket writeData:[@"SITE XDUPE 3\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:6];
         [socket readDataWithTimeout:-1 tag:6];
-        [socket writeData:[@"TYPE I\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:1];
+        [socket writeData:[@"TYPE I\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:7];
         [socket readDataWithTimeout:-1 tag:7];
-        [socket writeData:[@"PWD\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:1];
+        [socket writeData:[@"PWD\n" dataUsingEncoding:NSASCIIStringEncoding] withTimeout:5000 tag:8];
         [socket readDataWithTimeout:-1 tag:8];
         
     }
