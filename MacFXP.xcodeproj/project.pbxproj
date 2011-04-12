@@ -12,7 +12,9 @@
 		C6D745501354D36C00AFF270 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D7454F1354D36C00AFF270 /* main.m */; };
 		C6D745531354D36C00AFF270 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C6D745511354D36C00AFF270 /* Credits.rtf */; };
 		C6D745561354D36C00AFF270 /* MacFXPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D745551354D36C00AFF270 /* MacFXPAppDelegate.m */; };
-		C6D745591354D36C00AFF270 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D745571354D36C00AFF270 /* MainMenu.xib */; };
+		C6D745611354D39500AFF270 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D745601354D39500AFF270 /* AsyncSocket.m */; };
+		C6D745641354D3AD00AFF270 /* FTPConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D745631354D3AD00AFF270 /* FTPConnectionController.m */; };
+		C6D7456E1354D41200AFF270 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D7456D1354D41200AFF270 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +23,18 @@
 		C6D745451354D36C00AFF270 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C6D745461354D36C00AFF270 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C6D745471354D36C00AFF270 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C6D7454A1354D36C00AFF270 /* MacFXP-Info.plist */ = {isa = PBXFileReference; path = "MacFXP-Info.plist"; sourceTree = "<group>"; };
+		C6D7454A1354D36C00AFF270 /* MacFXP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacFXP-Info.plist"; sourceTree = "<group>"; };
 		C6D7454C1354D36C00AFF270 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C6D7454E1354D36C00AFF270 /* MacFXP-Prefix.pch */ = {isa = PBXFileReference; path = "MacFXP-Prefix.pch"; sourceTree = "<group>"; };
+		C6D7454E1354D36C00AFF270 /* MacFXP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacFXP-Prefix.pch"; sourceTree = "<group>"; };
 		C6D7454F1354D36C00AFF270 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6D745521354D36C00AFF270 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		C6D745541354D36C00AFF270 /* MacFXPAppDelegate.h */ = {isa = PBXFileReference; path = MacFXPAppDelegate.h; sourceTree = "<group>"; };
+		C6D745541354D36C00AFF270 /* MacFXPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacFXPAppDelegate.h; sourceTree = "<group>"; };
 		C6D745551354D36C00AFF270 /* MacFXPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacFXPAppDelegate.m; sourceTree = "<group>"; };
-		C6D745581354D36C00AFF270 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C6D7455F1354D39500AFF270 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		C6D745601354D39500AFF270 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		C6D745621354D3AD00AFF270 /* FTPConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPConnectionController.h; sourceTree = "<group>"; };
+		C6D745631354D3AD00AFF270 /* FTPConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPConnectionController.m; sourceTree = "<group>"; };
+		C6D7456D1354D41200AFF270 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +88,13 @@
 		C6D745481354D36C00AFF270 /* MacFXP */ = {
 			isa = PBXGroup;
 			children = (
+				C6D745621354D3AD00AFF270 /* FTPConnectionController.h */,
+				C6D745631354D3AD00AFF270 /* FTPConnectionController.m */,
+				C6D7455F1354D39500AFF270 /* AsyncSocket.h */,
+				C6D745601354D39500AFF270 /* AsyncSocket.m */,
 				C6D745541354D36C00AFF270 /* MacFXPAppDelegate.h */,
 				C6D745551354D36C00AFF270 /* MacFXPAppDelegate.m */,
-				C6D745571354D36C00AFF270 /* MainMenu.xib */,
+				C6D7456D1354D41200AFF270 /* MainMenu.xib */,
 				C6D745491354D36C00AFF270 /* Supporting Files */,
 			);
 			path = MacFXP;
@@ -154,7 +164,7 @@
 			files = (
 				C6D7454D1354D36C00AFF270 /* InfoPlist.strings in Resources */,
 				C6D745531354D36C00AFF270 /* Credits.rtf in Resources */,
-				C6D745591354D36C00AFF270 /* MainMenu.xib in Resources */,
+				C6D7456E1354D41200AFF270 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +177,8 @@
 			files = (
 				C6D745501354D36C00AFF270 /* main.m in Sources */,
 				C6D745561354D36C00AFF270 /* MacFXPAppDelegate.m in Sources */,
+				C6D745611354D39500AFF270 /* AsyncSocket.m in Sources */,
+				C6D745641354D3AD00AFF270 /* FTPConnectionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,14 +199,6 @@
 				C6D745521354D36C00AFF270 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		C6D745571354D36C00AFF270 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6D745581354D36C00AFF270 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
